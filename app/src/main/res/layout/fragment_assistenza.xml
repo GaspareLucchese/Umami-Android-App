@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/red"
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:id="@+id/assistenza_titolo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ASSISTENZA CLIENTI"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_margin="30dp"
+                android:textSize="28sp"/>
+
+            <TextView
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:id="@+id/assistenza_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCRIVI IL MOTIVO DELLA RICHIESTA DI ASSISTENZA"
+                android:textSize="13dp"
+                app:layout_constraintTop_toBottomOf="@id/assistenza_titolo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/assistenza_text"
+                android:layout_marginTop="47dp"/>
+
+            <EditText
+                android:background="@drawable/edit_text"
+                android:id="@+id/assistenza_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/assistenza_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:inputType="textMultiLine"
+                android:textSize="15dp"
+                android:minLines="7"
+                android:maxLines="20"
+                android:maxLength="550"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="top|start"/>
+
+            <Button
+                android:textSize="18sp"
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:background="@drawable/bottone"
+                android:id="@+id/assistenza_button"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="INVIA"
+                android:layout_marginVertical="40dp"
+                app:layout_constraintTop_toBottomOf="@id/assistenza_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

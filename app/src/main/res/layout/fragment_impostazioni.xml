@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:id="@+id/impostazioni_text"
+                android:textColor="@color/red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IMPOSTAZIONI"
+                android:textSize="28sp"
+                android:layout_margin="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <Button
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:background="@drawable/bottone"
+                android:textSize="17sp"
+                android:id="@+id/modificaProfilo_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/impostazioni_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/PagamentiTransazioni_button"
+                android:layout_marginTop="53dp"
+                android:layout_marginHorizontal="30dp"
+                android:text="MODIFICA PROFILO" />
+
+            <Button
+                android:textSize="17sp"
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:background="@drawable/bottone"
+                android:id="@+id/PagamentiTransazioni_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/modificaProfilo_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/AssistenzaClienti_button"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="PAGAMENTI E TRANSAZIONI   "/>
+
+            <Button
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:textSize="17sp"
+                android:background="@drawable/bottone"
+                android:id="@+id/AssistenzaClienti_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/PagamentiTransazioni_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/logout_button"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="ASSISTENZA CLIENTI"/>
+
+            <Button
+                android:layout_marginVertical="55dp"
+                android:textSize="17sp"
+                android:backgroundTint="@color/red"
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:id="@+id/logout_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOGOUT"
+                android:paddingHorizontal="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintTop_toBottomOf="@id/AssistenzaClienti_button"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

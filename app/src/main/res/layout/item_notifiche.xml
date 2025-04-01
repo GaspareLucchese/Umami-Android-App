@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/logo_cut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="10dp">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/messaggio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Descrizione del messaggio di esempio. Questo è una notifica tipo."
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="@id/imageView"
+        app:layout_constraintBottom_toTopOf="@id/data_messaggio"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="10dp">
+
+    </TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/data_messaggio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="gg/mm/aaaa"
+        android:textSize="13sp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/messaggio"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp">
+
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textColor="@color/red"
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:id="@+id/modifica_carta_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MODIFICA LA TUA CARTA"
+                android:textSize="28sp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="30dp"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/intestatario"
+                android:layout_marginTop="60dp"
+                android:layout_marginStart="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:textSize="18sp"
+                android:text="INTESTATARIO CARTA"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/modifica_carta_text"/>
+            <EditText
+                android:id="@+id/intestatarioInserito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/intestatario"
+                android:layout_marginHorizontal="30dp"/>
+
+            <TextView
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:id="@+id/numeroCarta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NUMERO CARTA"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/intestatarioInserito"
+                android:layout_marginTop="18dp"
+                android:layout_marginStart="30dp" />
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/numeroCartaInserito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/numeroCarta"
+                android:layout_marginHorizontal="30dp"/>
+
+            <TextView
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:id="@+id/scadenzaCarta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCADENZA CARTA"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/numeroCartaInserito"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="30dp" />
+            <EditText
+                android:inputType="number"
+                android:id="@+id/scadenzaCartaInserita"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                app:layout_constraintStart_toEndOf="@id/scadenzaCarta"
+                app:layout_constraintTop_toTopOf="@id/scadenzaCarta"
+                app:layout_constraintBottom_toBottomOf="@id/scadenzaCarta"
+                android:layout_marginHorizontal="30dp"/>
+
+            <TextView
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:id="@+id/codiceCarta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CODICE CARTA"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scadenzaCartaInserita"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="30dp" />
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/codiceCartaInserito"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@id/scadenzaCartaInserita"
+                app:layout_constraintTop_toTopOf="@id/codiceCarta"
+                app:layout_constraintBottom_toBottomOf="@id/codiceCarta"
+                android:layout_marginEnd="30dp"/>
+
+            <Button
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:layout_marginVertical="80dp"
+                android:textSize="17sp"
+                android:background="@drawable/bottone"
+                android:id="@+id/conferma_bottone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/numeroCartaInserito"
+                app:layout_constraintEnd_toEndOf="@id/numeroCartaInserito"
+                app:layout_constraintTop_toBottomOf="@id/codiceCartaInserito"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="CONFERMA"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

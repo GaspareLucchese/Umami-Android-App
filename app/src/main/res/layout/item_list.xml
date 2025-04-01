@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/plate_izu_oshima_a_dishes_my_japanese_home_264"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:id="@+id/nomeOggetto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nome Oggetto"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        android:layout_margin="10dp"/>
+
+    <RatingBar
+        android:id="@+id/ratingImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/nomeOggetto"
+        android:layout_margin="10dp"/>
+    <TextView
+        android:id="@+id/prezzo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EUR 000.00"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/ratingImage"
+        android:layout_margin="10dp"
+        />
+    <Button
+        android:id="@+id/aggiuntaButton"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/prezzo"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        android:layout_margin="10dp"
+        android:text="Aggiungi al carrello"/>
+
+    <ImageButton
+        android:id="@+id/eliminaProdotto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_delete_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/prezzo"
+        app:layout_constraintBottom_toBottomOf="@id/prezzo"
+        android:layout_marginEnd="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomePageActivity">
+
+    <LinearLayout
+        android:background="@color/red"
+        android:id="@+id/barra_ricerca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:backgroundTint="@color/red"
+            android:id="@+id/notify_btn"
+            app:tint="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/notify_icon"
+            android:layout_marginHorizontal="5dp"/>
+
+        <EditText
+            android:background="@drawable/barra_background"
+            android:layout_gravity="center"
+            android:id="@+id/ricerca_text"
+            android:backgroundTint="@color/also_white"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginVertical="5dp"
+            android:layout_marginEnd="50dp"
+            android:paddingHorizontal="20dp"
+            android:drawableEnd="@drawable/baseline_search_24"
+            android:hint="Cerca prodotti"
+            android:imeOptions="actionSearch"
+            android:inputType="text"/>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/barra_ricerca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/barra">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bannerCollections"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/news_txt"
+                android:scrollbars="horizontal">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/news_txt"
+                android:text="Nuovi Arrivi"
+                android:textSize="35sp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/cormorantsc_semibold"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/bannerCollections"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/news_rv">
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/news_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal"
+                app:layout_constraintBottom_toTopOf="@id/news_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/news_txt"
+                tools:listitem="@layout/item_home_page" />
+
+            <Button
+                android:fontFamily="@font/cormorantsc_semibold"
+                android:textSize="17sp"
+                android:textColor="@color/also_white"
+                android:background="@drawable/bottone"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="40dp"
+                android:id="@+id/news_btn"
+                android:text="Vedi tutti i prodotti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/news_rv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/offers_txt">
+            </Button>
+
+            <TextView
+                android:textSize="35sp"
+                android:fontFamily="@font/cormorantsc_semibold"
+                android:textColor="@color/black"
+                android:id="@+id/offers_txt"
+                android:text="In Offerta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/news_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/offers_rv">
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/offers_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginVertical="10dp"
+                app:layout_constraintTop_toBottomOf="@id/offers_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/offers_btn"
+                android:scrollbars="horizontal"
+                tools:listitem="@layout/item_home_page">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <Button
+                android:fontFamily="@font/cormorantsc_semibold"
+                android:textSize="20sp"
+                android:textColor="@color/also_white"
+                android:background="@drawable/bottone"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="40dp"
+                android:id="@+id/offers_btn"
+                android:text="Vedi tutti i prodotti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/offers_rv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/best_sellers_txt">
+            </Button>
+
+            <TextView
+                android:textSize="35sp"
+                android:fontFamily="@font/cormorantsc_semibold"
+                android:textColor="@color/black"
+                android:id="@+id/best_sellers_txt"
+                android:text="I più venduti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/offers_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/best_sellers_rv">
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/best_sellers_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="25dp"
+                app:layout_constraintTop_toBottomOf="@id/best_sellers_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/best_sellers_btn"
+                android:scrollbars="horizontal"
+                tools:listitem="@layout/item_home_page">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <Button
+                android:fontFamily="@font/cormorantsc_semibold"
+                android:textSize="20sp"
+                android:textColor="@color/also_white"
+                android:background="@drawable/bottone"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="40dp"
+                android:id="@+id/best_sellers_btn"
+                android:text="Vedi tutti i prodotti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/best_sellers_rv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/restock_txt">
+            </Button>
+
+            <TextView
+                android:textSize="35sp"
+                android:fontFamily="@font/cormorantsc_semibold"
+                android:textColor="@color/black"
+                android:text="Di nuovo disponibili"
+                android:id="@+id/restock_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/best_sellers_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/restock_rv">
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/restock_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginVertical="10dp"
+                app:layout_constraintTop_toBottomOf="@id/restock_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/restock_btn"
+                android:scrollbars="horizontal"
+                tools:listitem="@layout/item_home_page">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <Button
+                android:fontFamily="@font/cormorantsc_semibold"
+                android:textSize="20sp"
+                android:textColor="@color/also_white"
+                android:background="@drawable/bottone"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="40dp"
+                android:id="@+id/restock_btn"
+                android:text="Vedi tutti i prodotti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/restock_rv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+            </Button>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container_homepage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/barra_ricerca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/barra"/>
+
+    <LinearLayout
+        android:background="@color/red"
+        android:id="@+id/barra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:backgroundTint="@color/red"
+            android:id="@+id/home_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/home_icon"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:layout_gravity="center"
+            android:backgroundTint="@color/red"
+            android:id="@+id/category_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/bacchette_menu"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:layout_gravity="center"
+            android:backgroundTint="@color/red"
+            android:id="@+id/cart_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/cart_icon"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:layout_gravity="center"
+            android:backgroundTint="@color/red"
+            android:id="@+id/profile_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/profile_icon"
+            app:tint="@color/white" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

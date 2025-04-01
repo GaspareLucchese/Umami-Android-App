@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".OrdiniFragment"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:id="@+id/da_consegnare_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ORDINI IN SPEDIZIONE"
+                android:textSize="26sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rv_da_consegnare"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_da_consegnare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/consegnati_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/da_consegnare_txt"
+                tools:listitem="@layout/item_in_consegna"/>
+
+            <TextView
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:layout_marginTop="20dp"
+                android:id="@+id/consegnati_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ORDINI CONSEGNATI"
+                android:textSize="26sp"
+                app:layout_constraintTop_toBottomOf="@id/rv_da_consegnare"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rv_consegnati"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_consegnati"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/consegnati_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:listitem="@layout/item_consegnato">
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <TextView
+
+        android:fontFamily="@font/cormorantsc_semibold"
+        android:id="@+id/nessun_risultato_txt"
+        android:textSize="22sp"
+        android:text="(nessun ordine effettuato)"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

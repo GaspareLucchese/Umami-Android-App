@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/red"
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:id="@+id/modifica_profilo_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MODIFICA I TUOI DATI"
+                android:textSize="28sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_margin="30dp"/>
+
+            <TextView
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:id="@+id/nome_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NOME"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/modifica_profilo_title"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="30dp"
+                />
+
+            <EditText
+                android:id="@+id/nome_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/nome_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="17sp"
+                android:layout_marginHorizontal="30dp"/>
+
+            <TextView
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:id="@+id/cognome_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COGNOME"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nome_text"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="30dp"
+                />
+
+            <EditText
+                android:id="@+id/cognome_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:layout_marginHorizontal="30dp"
+                app:layout_constraintTop_toBottomOf="@id/cognome_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:id="@+id/indirizzo_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INDIRIZZO DI CONSEGNA"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cognome_text"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="30dp"
+                />
+
+            <EditText
+                android:id="@+id/indirizzo_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/indirizzo_title" />
+
+            <TextView
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:id="@+id/password_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PASSWORD"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/indirizzo_text"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="30dp"
+                />
+
+
+            <EditText
+                android:id="@+id/password_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                app:layout_constraintTop_toBottomOf="@id/password_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="30dp" />
+
+            <TextView
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:id="@+id/conferma_password_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONFERMA PASSWORD"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/password_text"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="30dp"
+                />
+
+
+            <EditText
+                android:id="@+id/conferma_password_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                app:layout_constraintTop_toBottomOf="@id/conferma_password_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="30dp" />
+
+            <Button
+                android:layout_marginVertical="80dp"
+                android:fontFamily="@font/alongsanss2_semibold"
+                android:textSize="17dp"
+                android:background="@drawable/bottone"
+                android:id="@+id/modifica_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/conferma_password_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginHorizontal="30dp"
+                android:text="MODIFICA"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

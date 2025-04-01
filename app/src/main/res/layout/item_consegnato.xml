@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/plate_izu_oshima_a_dishes_my_japanese_home_264"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <TextView
+        android:layout_marginHorizontal="10dp"
+        android:textSize="18sp"
+        android:id="@+id/nomeConsegnato"
+        android:text="Nome Prodotto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/indirizzo_spedizione"/>
+
+    <TextView
+        android:layout_marginHorizontal="10dp"
+        android:textSize="15sp"
+        android:id="@+id/costo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EUR 000.00"
+        app:layout_constraintTop_toBottomOf="@id/nomeConsegnato"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/data_arrivo"/>
+
+    <TextView
+        android:layout_marginHorizontal="10dp"
+        android:textSize="13sp"
+        android:id="@+id/data_arrivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="01/01/2024"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/indirizzo_spedizione"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:fontFamily="@font/alongsanss2_semibold"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="13sp"
+        android:id="@+id/valutaBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:text="VALUTA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/data_arrivo"
+        app:layout_constraintBottom_toBottomOf="@id/data_arrivo"/>
+
+    <RatingBar
+        android:id="@+id/valutazioneUtente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        style = "@style/Widget.AppCompat.RatingBar.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/data_arrivo"
+        app:layout_constraintBottom_toBottomOf="@id/data_arrivo"/>
+
+    <TextView
+        android:layout_marginHorizontal="10dp"
+        android:textSize="15sp"
+        android:id="@+id/indirizzo_spedizione"
+        android:text="Via della prova 0,  Palermo, Italia"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nomeConsegnato"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintBottom_toTopOf="@id/data_arrivo"
+        app:layout_constraintEnd_toStartOf="@id/costo"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
