@@ -43,11 +43,11 @@ The app is powered by a **Flask (Python) backend** connected to a **MySQL databa
 ### 🛒 Shopping Cart
 <img src="docs/screenshot_cart.jpg" width="275"/>
 
-### 💳 Payment Details
-<img src="docs/screenshot_payment.jpg" width="275"/>
-
 ### 📜 Orders & Order Ratings
 <img src="docs/screenshot_orders.jpg" width="275"/>
+
+### 💳 Payment Details
+<img src="docs/screenshot_payment.jpg" width="275"/>
 
 ### 🔔 Notifications
 <img src="docs/screenshot_notifications.jpg" width="275"/>
