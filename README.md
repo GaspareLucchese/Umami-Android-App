@@ -26,7 +26,7 @@ The app is powered by a **Flask (Python) backend** connected to a **MySQL databa
 ## 🖼️ Screenshots
 
 ### 🏠 Home Page
-![Home Screen](docs/screenshot_home.jpg)
+<img src="docs/screenshot_home.jpg" width="300"/>
 
 ### 📄 Product Details
 ![Product Screen](docs/screenshot_product.jpg)
