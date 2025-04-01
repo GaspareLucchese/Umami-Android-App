@@ -26,25 +26,25 @@ The app is powered by a **Flask (Python) backend** connected to a **MySQL databa
 ## 🖼️ Screenshots
 
 ### 🏠 Home Page
-<img src="docs/screenshot_home.jpg" width="250"/>
+<img src="docs/screenshot_home.jpg" width="275"/>
 
 ### 📄 Product Details
 <img src="docs/screenshot_product.jpg" width="250"/>
 
 ### 🗂️ Product Categories
-![Categories](docs/screenshot_categories.jpg)
+<img src="docs/screenshot_categories.jpg" width="250"/>
 
 ### 🛒 Shopping Cart
-![Cart](docs/screenshot_cart.jpg)
+<img src="docs/screenshot_cart.jpg" width="250"/>
 
 ### 💳 Payment Details
-![Payment Details](docs/screenshot_payment.jpg)
+<img src="docs/screenshot_payment.jpg" width="250"/>
 
 ### 📜 Orders & Order Ratings
-![Orders](docs/screenshot_orders.jpg)
+<img src="docs/screenshot_orders.jpg" width="250"/>
 
 ### 🔔 Notifications
-![Notifications](docs/screenshot_notifications.jpg)
+<img src="docs/screenshot_notifications.jpg" width="250"/>
 
 ## 🛠️ Technologies Used
 - **Languages**: Kotlin, Python, XML, SQL  
