@@ -21,7 +21,13 @@ The app is powered by a **Flask (Python) backend** connected to a **MySQL databa
 - 🔎 **Product Discovery**:  
   - Search bar and category filters for **plates, bowls, teacups, chopsticks, and more**.  
   - Highlighted deals on the homepage.  
-- 📦 **Order Tracking & Notifications**: Users can monitor their purchases and receive updates.  
+- 📦 **Order Tracking & Notifications**: Users can monitor their purchases and receive updates.
+
+## 🛠️ Technologies Used
+- **Languages**: Kotlin, Python, XML, SQL  
+- **Architecture**: MVVM (Model-View-ViewModel)  
+- **Libraries**: Flask, Retrofit, Glide, Gson  
+- **Database**: MySQL 
 
 ## 🖼️ Screenshots
 
@@ -45,9 +51,3 @@ The app is powered by a **Flask (Python) backend** connected to a **MySQL databa
 
 ### 🔔 Notifications
 <img src="docs/screenshot_notifications.jpg" width="275"/>
-
-## 🛠️ Technologies Used
-- **Languages**: Kotlin, Python, XML, SQL  
-- **Architecture**: MVVM (Model-View-ViewModel)  
-- **Libraries**: Flask, Retrofit, Glide, Gson  
-- **Database**: MySQL 
