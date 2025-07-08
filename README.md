@@ -31,23 +31,41 @@ The app is powered by a **Flask (Python) backend** connected to a **MySQL databa
 
 ## 🖼️ Screenshots
 
-### 🏠 Home Page
-<img src="docs/screenshot_home.jpg" width="275"/>
+<table>
+  <tr>
+    <td align="center">
+      <b>🏠 Home Page</b><br>
+      <img src="docs/screenshot_home.jpg" width="200"/>
+    </td>
+    <td align="center">
+      <b>📄 Product Details</b><br>
+      <img src="docs/screenshot_product.jpg" width="200"/>
+    </td>
+    <td align="center">
+      <b>🗂️ Categories</b><br>
+      <img src="docs/screenshot_categories.jpg" width="200"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>🛒 Shopping Cart</b><br>
+      <img src="docs/screenshot_cart.jpg" width="200"/>
+    </td>
+    <td align="center">
+      <b>📜 Orders</b><br>
+      <img src="docs/screenshot_orders.jpg" width="200"/>
+    </td>
+    <td align="center">
+      <b>💳 Payment</b><br>
+      <img src="docs/screenshot_payment.jpg" width="200"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="3">
+      <b>🔔 Notifications</b><br>
+      <img src="docs/screenshot_notifications.jpg" width="200"/>
+    </td>
+  </tr>
+</table>
 
-### 📄 Product Details
-<img src="docs/screenshot_product.jpg" width="275"/>
 
-### 🗂️ Product Categories
-<img src="docs/screenshot_categories.jpg" width="275"/>
-
-### 🛒 Shopping Cart
-<img src="docs/screenshot_cart.jpg" width="275"/>
-
-### 📜 Orders & Order Ratings
-<img src="docs/screenshot_orders.jpg" width="275"/>
-
-### 💳 Payment Details
-<img src="docs/screenshot_payment.jpg" width="275"/>
-
-### 🔔 Notifications
-<img src="docs/screenshot_notifications.jpg" width="275"/>
